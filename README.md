@@ -38,7 +38,7 @@ docker run --rm -p 8501:8501 -e DEPLOY_ENV=Local-Docker helpdesk-cloud:week11
 Open `http://localhost:8501`.
 
 ## Cloud Deployment
-Follow the Week 11 Individual Exercise document in `docs/`.
+Deployed to https://sdi4213-week11.onrender.com/ via Render.
 
 ## Security
 - Do not commit `.env`.
