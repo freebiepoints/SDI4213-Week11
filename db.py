@@ -17,7 +17,9 @@ def connection():
     url = os.getenv("DATABASE_URL", "").strip()
     if url.startswith(("postgres://", "postgresql://")):
         import psycopg
-        conn = psycopg.connect(url)
+        from psycopg.rows import dict_row
+
+        conn = psycopg.connect(url, row_factory=dict_row)
     else:
         path = os.getenv("SQLITE_PATH", "helpdesk.db")
         conn = sqlite3.connect(path)
